@@ -1,6 +1,5 @@
-$("a").click(function(evt){
-	evt.stopPropagation();
-    evt.preventDefault();
-    
-    $(".lightUp").toggle();
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal({backdrop: true});
+	});
 });

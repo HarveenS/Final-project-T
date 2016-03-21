@@ -64,9 +64,9 @@ div.transbox1 h1 span {
 aside.characters {
 	position: fixed;
 	right: 0;
-	top: 10em;
+	top: 12em;
 	font-size: 1.2em;
-	font: bold;
+	font: bold, 'PT Sans', sans-serif;
 /*	margin-right: 1em;*/
 }
 
@@ -78,37 +78,33 @@ aside.characters ul {
 
 aside.characters li {
 	background-color: rgba(252, 252, 252, 0.2);
-	margin: 1em;iv.transbox1 h1 span
+	margin: 0em; iv.transbox1 h1 span;
 	padding: 0.5em;
-	width: 4em;
+	width: 6em;
 	border: rgba(0, 0, 0, 0.6), 0.2em;
-  /* the border will curve into a 'D' */  
-  	border-radius: 40px 10px 0px 40px;
 }
 
 aside.characters li:hover {
 	background-color: rgba(192,186,120, 0.6);
-	color: coral;
+	color: #f55649;
 }
 
 
 section.transbox2 {
 	background-color: rgba(212, 219, 200, 0.3);
-	width: 15em;
-	height: 20em;
+	width: 13em;
+	height: 17em;
 	position: absolute;
 	align: right;
 	margin-right: 1em;
 	margin-top: 4em;
 	font-family: 'PT Sans', sans-serif;
 	border: rgba(212, 219, 200, 0.6), 0.2em;
-  /* the border will curve into a 'D' */  
-  	border-radius: 10px 40px 40px 10px;
 }
 
-section.transbox2 h1 {
+section.transbox2 h2 {
 	font-size: 2em;
-	color: coral;
+	color: #f55649;
 	padding-left: 1em;
 	padding-right: 1em;
 }
@@ -165,10 +161,11 @@ section.transbox2 h3 {
 
 blockquote {
 	background-color: rgb(252, 252, 252);
-	font-family: font-family: 'PT Sans', sans-serif;
+	color: dimgray;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 1.3em;
 	font-style: bold;
-	display: inline-block;
+	display: inline-block
 }
 
 .quote1 {
@@ -196,7 +193,7 @@ footer {
     color: floralwhite;
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
-	height: 16em;
+	height: 10em;
 }
 
 footer h4:hover {
@@ -209,15 +206,17 @@ footer img {
 	float: left;
 	margin: 0.6em;
 	margin-bottom: 0;
+	z-index: -4em;
+	outline-color: #f55649;
 }
 
-.footer img:hover {
-	outline-color: coral;
+footer img:hover {
+	border-outline: #f55649;
 	outline-width: thick;
 }
 	
-.lightUp{
-    position : absolute;
+.lightUp {
+    position: absolute;
     width: 100%;
     height: 100%;
     top:0;
@@ -225,14 +224,19 @@ footer img {
     display: none;
 }
 
-.overlay{
-    width: 100%;
-    height: 100%;
-    background : rgba(0, 0, 0, 0.7)
+.overlay {
+    width: 30em;
+    height: 30em;
+	border: #EBBD63;
+    background: rgba(0, 0, 0, 0.8);
+	position: center;
+	top: 10%;
+    left: 10%;
+	padding: 5em;
 }
 
 .content{
-    background : transparent;
+    background: transparent;
     position: absolute;
     top: 10%;
     left: 10%;
@@ -242,6 +246,7 @@ footer img {
     border-radius: 3em;
 	text-align: justify;
 }
+
 
 /* footer.container h4 {
 	object-position: top;
@@ -341,10 +346,13 @@ figure a.close-caption.hidden {
    Modify as content requires.
    ========================================================================== */
 
+
+/*
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 }
 
+/*
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
@@ -357,7 +365,7 @@ figure a.close-caption.hidden {
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
+/*
 @media print {
     *,
     *:before,
@@ -367,7 +375,7 @@ figure a.close-caption.hidden {
         background: transparent !important;
         color: #000 !important; /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
+ /*       box-shadow: none !important;
         text-shadow: none !important;
     }
 
@@ -388,7 +396,7 @@ figure a.close-caption.hidden {
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
+/*
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
